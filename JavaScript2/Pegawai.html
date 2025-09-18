@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tugas 2 - Data Pegawai</title>
+</head>
+<body>
+
+<script>
+  // Data Pegawai
+  let nama = "dodi prayodi";
+  let umur = 25;
+  let jabatan = "manajer";
+  let status = "menikah";
+
+  // Gaji Pokok
+  let gapok;
+  if (jabatan.toLowerCase() === "manajer") {
+    gapok = 15000000;
+  } else if (jabatan.toLowerCase() === "asisten manajer") {
+    gapok = 10000000;
+  } else {
+    gapok = 5000000;
+  }
+
+  // Tunjangan Jabatan 15% dari gapok
+  let tunjanganJabatan = 0.15 * gapok;
+
+  // BPJS 10% dari gapok
+  let bpjs = 0.10 * gapok;
+
+  // Tunjangan Keluarga (ternary)
+  let tunjanganKeluarga = (status.toLowerCase() === "menikah") ? 0.20 * gapok : 0;
+
+  // Total Gaji
+  let totalGaji = gapok + tunjanganJabatan + bpjs + tunjanganKeluarga;
+
+  // Cetak tabel 
+  document.write("<h2>Data Pegawai</h2>");
+  document.write("<table border='1' cellspacing='0' cellpadding='8'>");
+  
+  document.write("<thead>");
+  document.write("<tr>");
+  document.write("<th>Nama Pegawai</th>");
+  document.write("<th>Umur</th>");
+  document.write("<th>Jabatan</th>");
+  document.write("<th>Status</th>");
+  document.write("<th>Gaji Pokok</th>");
+  document.write("<th>Tunjangan Jabatan</th>");
+  document.write("<th>BPJS</th>");
+  document.write("<th>Tunjangan Keluarga</th>");
+  document.write("</tr>");
+  document.write("</thead>");
+  
+  document.write("<tbody>");
+  document.write("<tr>");
+  document.write("<td>"+nama+"</td>");
+  document.write("<td>"+umur+"</td>");
+  document.write("<td>"+jabatan+"</td>");
+  document.write("<td>"+status+"</td>");
+  document.write("<td>Rp "+gapok.toLocaleString()+"</td>");
+  document.write("<td>Rp "+tunjanganJabatan.toLocaleString()+"</td>");
+  document.write("<td>Rp "+bpjs.toLocaleString()+"</td>");
+  document.write("<td>Rp "+tunjanganKeluarga.toLocaleString()+"</td>");
+  document.write("</tr>");
+  document.write("</tbody>");
+  
+  document.write("<tfoot>");
+  document.write("<tr>");
+  document.write("<td colspan='8'><b>Total Gaji: Rp "+totalGaji.toLocaleString()+"</b></td>");
+  document.write("</tr>");
+  document.write("</tfoot>");
+  
+  document.write("</table>");
+</script>
+
+</body>
+</html>
