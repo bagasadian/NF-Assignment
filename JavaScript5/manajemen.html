@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tugas Toko Onlen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Manajemen Produk Toko Online</h2>
+
+  <input type="text" id="inputProduk" placeholder="Masukkan nama produk">
+  <button id="tmblPlus">Tambah Produk</button>
+  <button id="tmblMin">Hapus Produk</button>
+  <button id="tmblTampil">Tampilkan Semua Produk</button>
+
+  <h3>Daftar Produk:</h3>
+  <ul id="listProduk"></ul>
+
+  <script>
+    // Class untuk manajemen produk
+    class Toko {
+      constructor(...produkAwal) {
+        this.produk = [...produkAwal];
+      }
+
+      tambahProduk(namaProduk) {
+        this.produk.push(namaProduk);
+      }
+
+      hapusProduk(namaProduk) {
+        this.produk = this.produk.filter(item => item !== namaProduk);
+      }
+
+      tampilkanProduk() {
+        const list = document.getElementById("listProduk");
+        list.innerHTML = "";
+        // destructuring
+        this.produk.forEach((produk) => {
+          const li = document.createElement("li");
+          li.textContent = produk;
+          list.appendChild(li);
+        });
+      }
+    }
+
+    // Buat instance toko dengan produk awal
+    const toko = new Toko("Laptop", "Mouse", "Keyboard", "Monitor", "Headset");
+
+    // Event Listener Tambah
+    document.getElementById("tmblPlus").addEventListener("click", () => {
+      const input = document.getElementById("inputProduk");
+      const { value } = input; // destructuring
+      if (value) {
+        toko.tambahProduk(value);
+        toko.tampilkanProduk();
+        input.value = "";
+      }
+    });
+
+    // Event Listener Hapus
+    document.getElementById("tmblMin").addEventListener("click", () => {
+      const input = document.getElementById("inputProduk");
+      const { value } = input;
+      toko.hapusProduk(value);
+      toko.tampilkanProduk();
+      input.value = "";
+    });
+
+    // Event Listener Tampil
+    document.getElementById("tmblTampil").addEventListener("click", () => {
+      toko.tampilkanProduk();
+    });
+
+    toko.tampilkanProduk();
+  </script>
+</body>
+</html>
