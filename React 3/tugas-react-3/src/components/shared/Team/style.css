@@ -1,0 +1,70 @@
+#team {
+  padding: 60px 0;
+  border-radius: 10px;
+}
+
+#team h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+#team h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #366aad;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* Card Member */
+#team .col-lg-4 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+}
+
+#team .col-lg-4:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background: white;
+  border-radius: 12px;
+}
+
+/* Foto */
+#team img {
+  border: 5px solid #ddd;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+#team img:hover {
+  border-color: #366aad;
+  transform: scale(1.05);
+}
+
+#team h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 15px;
+  color: #222;
+}
+
+#team p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Tombol */
+#team .btn-secondary {
+  background-color: #366aad;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+#team .btn-secondary:hover {
+  background-color: #366aad;
+}

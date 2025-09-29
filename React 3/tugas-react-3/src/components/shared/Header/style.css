@@ -1,0 +1,54 @@
+header {
+  background-color: #ffffff; /* putih biar bersih */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+header .fs-4 {
+  color: #366aad;
+}
+
+/* Nav link */
+header .nav-link {
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+header .nav-link:hover {
+  color: #366aad;
+  transform: translateY(-2px);
+}
+
+header .nav-link.active {
+  color: #366aad;
+  font-weight: 600;
+  border-bottom: 2px solid #366aad;
+}
+
+/* Tombol */
+header .btn {
+  border-radius: 20px;
+  padding: 6px 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+header .btn-outline-primary:hover {
+  background-color: #366aad;
+  color: #fff;
+}
+
+header .btn-primary {
+  background-color: #366aad;
+  border-color: #366aad;
+}
+
+header .btn-primary:hover {
+  background-color: #274a7d;
+  border-color: #274a7d;
+}
