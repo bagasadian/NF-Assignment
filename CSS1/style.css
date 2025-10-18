@@ -1,0 +1,201 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body */
+body {
+    background: #f7f7fb;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    margin: 0;
+    padding: 0;
+}
+
+.header-img {
+    display: block;
+    width: 100vw;
+    height: auto;
+    border-radius: 0;
+}
+
+/* Navbar */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background: linear-gradient(135deg, #4b0082, #8e2de2);
+    padding: 14px 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-radius: 0 0 12px 12px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu a {
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 8px 10px;
+    transition: color 0.3s ease;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -4px;
+    left: 0;
+    background-color: #ffdf6c; 
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.menu a:hover {
+    color: #ffdf6c;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* Heading */
+h1, h2 {
+    margin: 20px 0 15px;
+    color: #6a0dad; 
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Paragraf dan List */
+p, li {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+table th {
+    background: #6a0dad; 
+    color: white;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Fieldset */
+fieldset {
+    border: 2px solid #6a0dad;
+    border-radius: 10px;
+    padding: 15px;
+    background: #ffffff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+fieldset legend {
+    font-weight: bold;
+    color: #6a0dad;
+    padding: 0 8px;
+    font-size: 18px;
+}
+
+/* Daftar link teman */
+fieldset ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+fieldset ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f9f5ff; 
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+fieldset ul li a:hover {
+    background: #6a0dad;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Profile */
+.profile {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.profile img {
+    border-radius: 50%;
+    border: 4px solid #6a0dad;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background: #6a0dad;
+    color: white;
+    padding: 12px;
+    font-size: 14px;
+    margin-top: 5px;
+    border-radius: 10px 10px 0 0;
+}

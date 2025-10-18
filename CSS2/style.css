@@ -1,0 +1,242 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/* Container */
+.container {
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    gap: 10px;
+    padding: 10px;
+    min-height: 70vh;
+}
+
+/* Sidebar */
+.sidebar {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Main Content */
+.content {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Body */
+body {
+    background: #fff5f7; 
+    color: #333;
+    line-height: 1.6;
+    border-radius: 10px;
+}
+
+/* Header */
+.header {
+    margin: 0;
+    padding: 0;
+}
+
+.header-img {
+    display: block;
+    width: 100vw;
+    height: auto;
+    border-radius: 0;
+}
+
+/* Menu */
+.menu {
+    text-align: center;
+    background: #ffffff;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #e11d48; 
+    font-weight: bold;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.menu a:hover {
+    color: #be123c;
+    transform: scale(1.1);
+}
+
+/* Heading */
+h1, h2 {
+    margin: 20px 0 15px;
+    color: #e11d48;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Paragraf dan List */
+p, li {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.sidebar.left ul li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 8px;
+    background: #f5f9ff;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.sidebar.left ul li a img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e11d48;
+}
+
+.sidebar.left ul li a span {
+    flex: 1;
+    font-size: 14px;
+}
+
+.sidebar.left ul li a:hover {
+    background: #e11d48;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+table th, table td {
+    border: 1px solid #fbcfe8; 
+    padding: 12px;
+    text-align: center;
+}
+
+table th {
+    background: #e11d48; 
+    color: white;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Fieldset */
+fieldset {
+    border: 2px solid #e11d48;
+    border-radius: 10px;
+    padding: 15px;
+    background: #ffffff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+fieldset legend {
+    font-weight: bold;
+    color: #e11d48;
+    padding: 0 8px;
+    font-size: 18px;
+}
+
+/* Daftar link teman */
+fieldset ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+fieldset ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    background: #ffe4e6; 
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+fieldset ul li a:hover {
+    background: #e11d48;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Profile */
+.profile {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.profile img {
+    border-radius: 50%;
+    border: 4px solid #e11d48;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background: #e11d48;
+    color: white;
+    padding: 12px;
+    font-size: 14px;
+    margin-top: 5px;
+    border-radius: 10px 10px 0 0;
+}
